@@ -5,7 +5,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="shortcut icon" href="favicon.png">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style.css?v=11">
+		<link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
 	</head>
 	<body>
 		<main>
@@ -14,9 +18,10 @@
 			<div class="top-text">Travel is my real pleasure, and taking <a href="https://instagram.com/_andyist">photos</a> when I'm there.</div>
 			<div class="top-text">You can contact me at <a href="mailto:andy@uprated.com">andy@uprated.com</a>.</div>
 			<div class="line"></div>
-			<div class="title small">That guy who knows digital</div>
+			<div class="title small">That guy who knows digital <span>(and other useful stuff)</span></div>
 			<div class="title subheading">Andy White</div>
 			<div class="line"></div>
+			<!-- TBD booking call / advice meeting using... -->
 			<div class="profile-info">
 				Project links:
 				<a href="./mres">MRes </a>
@@ -28,15 +33,39 @@
 				<a href="#">Research</a> /
 				<a href="#">Company Operations</a> /
 				<a href="#">Project Managment</a> /
-				<a href="#">GA</a>, <a href="#">GTM</a>, <a href="#">GO</a>, <a href="#">GDS</a> /
+				<span class="tooltip" data-tooltip-content="#ga_content">GA</span>,
+				<a href="#" class="tooltip" title="Google Tag Manager">GTM</a>,
+				<a href="#" class="tooltip" title="Google Optimise">GO</a>,
+				<a href="#" class="tooltip" title="Google Data Studio">GDS</a> /
 				<a href="#">Systems architecture</a> /
-				<a href="#">ML</a>, <a href="#">DM</a>, <a href="#">DW</a> /
+				<a href="#" class="tooltip" title="Machine Learning">ML</a>,
+				<a href="#" class="tooltip" title="Data Mining">DM</a>,
+				<a href="#" class="tooltip" title="Data Warehousing">DW</a> /
 				<a href="#">E-Commerce</a> /
 				<a href="#">Digital Marketing</a>
 			</div>
+			<!-- TDB other stuff I know... mongodb, Tableu etc. etc.  etc. -->
 			<div class="site-info">
 				<a href="https://andyist.github.com/">&copy;2019 Andy White</a>
 			</div>
 		</main>
+		<div class="tooltip_templates">
+		    <span id="ga_content">
+		        <img src="ga.png" style="width:20px;height:25px" /> <strong>Google Analytics</strong>
+		    </span>
+		</div>
+		<script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+            	delay: 100,
+          		maxWidth: 500,
+          		speed: 300,
+          		        trigger: 'click',
+          		interactive: true,
+ 				animation: 'grow',
+            	theme: 'tooltipster-borderless'
+            });
+        });
+    	</script>
 	</body>
 </html>

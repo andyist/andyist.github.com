@@ -114,13 +114,18 @@ main {
 	}
 }
 
-a {
+a, .profile-info > span {
 	color: #ffffff;
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, .profile-info > span:hover {
+	cursor: pointer;
 	text-decoration: underline;
+}
+
+.tooltipster-content > span, span > img {
+	vertical-align: middle;
 }
 
 .top-text {
@@ -165,10 +170,17 @@ a:hover {
 	font-size: 5vw;
 	letter-spacing: -0.1vw;
 }
+.title.small span{
+	font-size: 3vw;
+}
 
 @media screen and (max-width:960px) {
 	.title {
 		font-size: 10vw;
+	}
+	.title.small span{
+		display: block;
+		clear: both;
 	}
 }
 
