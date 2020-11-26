@@ -1,73 +1,571 @@
-<!DOCTYPE HTML>
+<!doctype html>
+
 <html lang="en">
-	<head>
-		<title>Andy White</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="shortcut icon" href="favicon.png">
-		<link rel="stylesheet" type="text/css" href="style.css?v=11">
-		<link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-    	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
-	</head>
-	<body>
-		<main>
-			<div class="top-text">Hello! I’m Andy White, founder / director at <a href="https://uprated.com/">Uprated</a>.</div>
-			<div class="top-text">I have 15 years of experince across the digital sector.</div>
-			<div class="top-text">Quick to learn, I have a penchant for problem solving across industries.</div>
-			<div class="top-text">You can contact me at <a href="mailto:andy@uprated.com">andy@uprated.com</a>.</div>
-			<div class="line"></div>
-			<!-- <div class="title small">That guy who knows digital <span>(and other useful stuff)</span></div> -->
-			<div class="title subheading">Andy White</div>
-			<div class="line"></div>
-			<!-- TBD booking call / advice meeting using... -->
-			<div class="profile-info">
-				Project links:
-				<a href="./mres">MRes </a>
-			</div>
-			<div class="profile-info">
-				Specialisms:
-				<a href="#">CTO/Company Director</a> /
-				<a href="#">Soluiton Architecture</a> /
-				<a href="#">Business Intelligence</a> /
-				<a href="#">Communication</a> /
-				<a href="#">Research</a> /
-				<a href="#">Company Operations</a> /
-				<a href="#">Project Managment</a> /
-				<span class="tooltip" data-tooltip-content="#ga_content">GA</span>,
-				<a href="#" class="tooltip" title="Google Tag Manager">GTM</a>,
-				<a href="#" class="tooltip" title="Google Optimise">GO</a>,
-				<a href="#" class="tooltip" title="Google Data Studio">GDS</a> /
-				<a href="#">Systems architecture</a> /
-				<a href="#" class="tooltip" title="Machine Learning">ML</a>,
-				<a href="#" class="tooltip" title="Data Mining">DM</a>,
-				<a href="#" class="tooltip" title="Data Warehousing">DW</a> /
-				<a href="#">E-Commerce</a> /
-				<a href="#">Digital Marketing</a>
-			</div>
-			<!-- TDB other stuff I know... mongodb, Tableu etc. etc.  etc. -->
-			<div class="site-info">
-				<a href="https://andyist.github.com/">&copy;2019 Andy White</a>
-			</div>
-		</main>
-		<!-- <div class="tooltip_templates">
-		    <span id="ga_content">
-		        <img src="ga.png" style="width:20px;height:25px" /> <strong>Google Analytics</strong>
-		    </span>
-		</div>-->
-		<script>
-        $(document).ready(function() {
-            $('.tooltip').tooltipster({
-            	delay: 100,
-          		maxWidth: 500,
-          		speed: 300,
-          		        trigger: 'click',
-          		interactive: true,
- 				animation: 'grow',
-            	theme: 'tooltipster-borderless'
-            });
-        });
-    	</script>
-	</body>
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="Andy White skill sheet">
+  <meta name="author" content="Andy White">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script type="module" src="./app.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--  <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+	<style>
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{
+    display:block
+}
+body{
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+     font-size:1.5rem;
+    font-weight:400;
+    line-height:1.5;
+    color:#000;
+    text-align:left;
+    background-color:#fdd700
+}
+[tabindex="-1"]:focus{
+    outline:0!important
+}
+hr{
+    box-sizing:content-box;
+    height:0;
+    overflow:visible
+}
+ h1,h2,h3,h4,h5,h6{
+    margin-top:0;
+    margin-bottom:.5rem
+}
+p{
+    margin-top:0;
+    margin-bottom:1rem
+}
+abbr[data-original-title], abbr[title]{
+    text-decoration:underline;
+    -webkit-text-decoration:underline dotted;
+    text-decoration:underline dotted;
+    cursor:help;
+    border-bottom:0;
+    -webkit-text-decoration-skip-ink:none;
+    text-decoration-skip-ink:none
+}
+address{
+    font-style:normal;
+    line-height:inherit
+}
+address,dl,ol,ul{
+    margin-bottom:1rem
+}
+dl,ol,ul{
+    margin-top:0
+}
+ol ol,ol ul,ul ol,ul ul{
+    margin-bottom:0
+}
+dt{
+    font-weight:700
+}
+dd{
+    margin-bottom:.5rem;
+    margin-left:0
+}
+blockquote{
+    margin:0 0 1rem
+}
+b,strong{
+    font-weight:bolder
+}
+small{
+    font-size:80%
+}
+sub,sup{
+    position:relative;
+    font-size:75%;
+    line-height:0;
+    vertical-align:baseline
+}
+sub{
+    bottom:-.25em
+}
+sup{
+    top:-.5em
+}
+a{
+    color:#1a0dab;
+    text-decoration:underline;
+    background-color:transparent
+}
+a:hover{
+    color:#0056b3;
+    text-decoration:none
+}
+header, footer {
+     background: #ffffff;
+     padding: 20px 0;
+}
+footer {
+    margin-top: 40px;
+}
+ h1 {
+     font-size: x-large 
+}
+ h3 {
+     font-size: medium 
+}
+ p.half {
+     width: 50%;
+     margin: 30px 0;
+}   
+li span {
+   display: none;
+}
+span.hide {
+    display: none;
+}
+	</style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Andy White</h1>
+            <h3>Digtial Agency Founder / CTO</h3>
+        </div>
+    </header>
+<div class="py-5 py-lg-6">
+    <div class="container">
+        
+        <p class="half">Over 15 years experince in planning, scoping and designing the architecture of digital business solutions. 
+            Projects range from data and systems to websites, web apps and the numerous interconnecting services behind the scenes.
+        </p>
+        <p class="half">As a <a href="https://uprated.com" target="_blank">business owner</a> I have added to this a wide range of operational, 
+            finaincial and human resource skills. Unlike a technical purist, I take a more holistic view - understadning the impact of 
+            decisions in context of the complex interchange between business needs, human factors and available technology. 
+        </p>
+        <p class="half">My ability to understan, lear and problem solve at speed has undrepinned my role as technical director. I have 
+            enjoyed many years of ideas generation and researhcing solutions for a vast range of orgnsations. I bolster this with an 
+            experinced professional network who act as an highly valuable sounding board on ideas and thinking.</p>
+        <h2>Skills & Experience <!-- small class="d-block">2005 - present</small --></h2>
+        <p>The following is not an exhaustive list, or particular specilisms. It aims to offer an overview of the digital industry experince I bring to the table.</p>
+        <hr class="mb-5" />
+        <div class="row mb-5">
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="projects">Example Projects</h4>
+                <p class="mt-2 small"></p>
+                <p>Grouped by sector</p>
+                <em>Projects are picked from the past 5 years. Most include digital strategy and some form of 3rd prty API integrations 
+                    - this is a given on the modern web. 'Web app' denotes user interacton on the system, typically with authentication. 
+                    'API' is where development of a custom API was required. 'Insight' is user/business analysis and consulting.</em>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item-list mb-4">
+                            <h5>Higher Education:</h5>
+                            <ul>
+                                <li>London Metropolitan University (website) <span>Following an extensive user experince research project, we designed and developed a nationlly leading new front-end</span></li>
+                                <li>University of Reading (insight)<span></span></li>
+                                <li>Southern Univerities Procurment Consortium (web app) <span>This membership platoform existed on a legacy system which was outside th ebudget scope ofr a compelet rebuild. To meet the need of impeding accessability standards we developed a range of cusotm data models and accessed the legacy system remotly and bridge functionality at the user touch points to create an invisilble brudge from a user perspectiv. </span></li>
+                                <li>St Clare's (website) <span></span></li>
+                            </ul> 
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Technology:</h5>
+                            <ul>
+                                <li>Thingstream (website)</li>
+                                <li>AMI Marine (ecom)</li>
+                                <li>Atlantas Marine (website)</li>
+                                <li>The O-Lab (website)</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Investment:</h5>
+                            <ul>
+                                <li>MSP Capital (multi-service)</li>
+                                <li>Clearbrook Capital (insight)</li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <h5>Retail:</h5>
+                            <ul>
+                                <li>Chillblast (api & web app TBC) <span>neo4j Python</span></li>
+                                <li>Noted in Style (multi-service & web apps)</li>
+                                <li>Pleasnence & Harper (ecom & web app) <span>AWS Lambda</span></li>
+                                <li>Hobby Craft (multi-service)</li>
+                                <li>Farrow & Ball (multi-service & web app) <span>avergae drive time</span></li>
+                                <li>Uniball (website)</li>
+                                <li>Whisper Me (api & web app)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 item-list">
+                        <h5>Charity:</h5>
+                        <ul>
+                            <li>Dogs for Good (website)</li>
+                            <li>Assitance Dogs UK (web app TBC)</li>
+                            <li>Heart of England Forest (multi-service)</li>
+                            <li>The RNLI (web app)</li>
+                            <li>MaaR (web app)</li>
+                        </ul>
+                        <div class="item-list mb-4">
+                            <h5>Healthcare:</h5>
+                            <ul>
+                                <li>Public Health Dorset (<a href="#masters">Masters project</a>) <span></span></li>
+                                <li>Mulbery House Care (website)<span></span></li>
+                                <li>Hythe Care (website)<span></span></li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Real Estate & Construction:</h5>
+                            <ul>
+                                <li>Choose My Agent (web app)</li>
+                                <li>Elizabeth Pryce (website/app)</li>
+                                <li>Tender Space (insight)</li>
+                                <li>JPS Landscape Design (website)</li>
+                            </ul>
+                        </div>
+                        <h5>Other:</h5>
+                        <ul>
+                            <li>BT Business (web apps)</li>
+                            <li>Bruce's Doggy Day Care (multi-service)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mb-5" />
+        <div class="row">
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="technology">Technologies</h4>
+                <p class="mt-2 small"></p>
+                <p>Infrastructure & Code</p>
+                <em></em>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item-list mb-4">
+                            <h5>Databases/Storage Engines:</h5>
+                            <ul> 
+                                <li>MySQL <span>The majority of staful data storage needs across </span></li>
+                                <li>MongoDB <span>We used filtering and aggregation to handle a requirment to compare/caulate against hundreds of thousands of real estate record comparisons in real time. The technology excelled at the task. Robo 3T was used to develop the original quries, then the service was depoyed ot a stand alone srver and wrapped with a REST API to handle requests from the web app.</span></li>
+                                <li>Neo4j <span>Currently a front runner in our technology selection for a computer part compatability web service project</span></li>
+                                <li>SQLite <span>For small simple apaps that require data storage, SQLite has prived many times it offers a pleasnely quick, easy solution.</span></li>
+                                <li>MS SQL <span>Worling with varoius corporate scale clients ultiamtly exposes you to MS SQL from time to time. I have previously complted a migration from an Azure MS SQL server to MySQL as part of a webapp build.</span></li>
+                                <li>Redis <span>When Redis was relativly new and I was a freelance contracot, I wrote an Expression Engine plugun to index all the meta data from a stock image library website contining circa 500k images. The plugin eleviated the MySQL bottleneck.</span></li>
+                                <li>Memcached <span>We have used Memcached as part of Magento setups in the past.</span></li>
+                                <li>ElasticSearch <span>We ran a discovery project on a woocmoomcer build utilins a range of extensions to see if it could stand up to large enterpirste product catalogues. Elastic search allowed us to create an instantly responsive real-time search with ease. The test were relativly successful, but ultimatly the clinet decided to adopt Shopify.</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Environments:</h5>
+                            <ul>
+                                <li>Linux</li>
+                                <li>Mac OS</li>
+                                <li>Apache</li>
+                                <li>Nginx</li>
+                                <li>Node</li>
+                                <li>VM Ware</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Foundations:</h5>
+                            <ul>
+                                <li><abbr title="Domain Name System">DNS</abbr> <span>working with domain names has been relevnt to nearly ebry project</span></li>
+                                <li><abbr title="Secure Socket Hirearchy">SSH</abbr> <span>The standard for access and manipulating web servers on nearly every project.</span></li>
+                                <li><abbr title="Representational State Transfer">REST</abbr>/<abbr title="Simple Object Access Protocol"></abbr>SOAP</abbr> <span>Dealing with 100s of APIs int he pst and speccing and writing a couple, these protocols are ubqiutious to modern web development.</span></li>
+                                <li>Email: <abbr title="Post Office Protocol">POP</abbr>, <abbr title="Simple Mail YRansfer Protocol">SMTP</abbr>, <abbr title="Internet Message Access Protocol">IMAP</abbr>, <abbr title="Sender Policy Framework">SPF</abbr>, <abbr title="DomainKeys Identified Mail">DKIM</abbr> <span>As such a ubiquitous aspect of the web, understanding of email protocols and routing has been relevant hrought mu career.</span></li>
+                                <li>Proxies <span>We have used proxies in the past to seamlessly switch user traffic to new ssites without wiaint for DNS propogation)</span></li>
+                                <li><abbr title="Virtual Private Netwroks">VPNs</abbr> <span>VPNs have been used for secure access via whitelisted IPs to secure servers.</span></li>
+                                <li>Firewalls <span>Various firewall configuration over the years. Typically created IP level ruels.</span></li>
+                                <li><abbr title="Telecommunicaiton Protocol/Internet Protocol">TCP/IP</abbr> <span>Having studied netowrks at univesity a protocol level of understading of data interchange on the web has often offered me greater insight into the.</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Optimisation:</h5>
+                            <ul>  
+                                <li>Pipelines</li>
+                                <li>Caches</li>
+                                <li>Sharding</li>
+                                <li>Bottlnecks</li>
+                                <li><abbr title="Content Delivery Network">CDNs</abbr></li>
+                                <li>Minification</li>
+                                <li>Compression</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 item-list">
+                        <div class="item-list mb-4">
+                            <h5><abbr title="Infrastructure as a Service">IaaS</abbr>/<abbr title="Platform as a Service">PaaS</abbr>/<abbr title="Software as a Service">SaaS</abbr>:</h5>
+                            <ul>
+                                <li><abbr title="Amazon Web Services">AWS</abbr> <span>Use of various web services, understanding of IAMand billing. Most comonly S3 and EC2.</span></li>
+                                <li>Google APIs <span>countless uses of Gogole's wide range of APIs and geenral ecosystem.</span></li>
+                                <li>MS Azure <span>Experince with Azure was consuming clinet data and moved away from the platform.</span></li>
+                                <li>Cloudways <span>I instigated out miraitkn to Cloudways in X, the comodotisation of webservers and assocated services was inveitable and this allowed us to redue/remove outr reliance on dev ops staffing with little to no negative impact to our offering.</span></li>
+                                <li>Netlify <span>experimenting with continuoue delivery</span></li>
+                                <li>Digital Ocean <span></span></li>
+                                <li>Cloudflare <span></span></li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <h5>Languages</h5>
+                            <ul>
+                                <li>PHP</li>
+                                <li>Python</li>
+                                <li>Javascript</li>
+                                <li>SQL</li>
+                                <li>HTML</li>
+                                <li>CSS/SASS</li>
+                                <li>Twig/Handlebars/Liquid/Blade</li>
+                            </ul>
+                        </div>
+                        <h5>Frameworks:</h5>
+                        <ul>
+                            <li>Laravel</li>
+                            <li>Lumen</li>
+                            <li>Express.js</li>
+                            <li>Flask</li>
+                            <li>Synphony</li>
+                            <li>Silex</li>
+                        </ul>
+                        <h5>Source control, build tools, package managemnet, etc.:</h5>
+                        <ul>
+                            <li>Git</li>
+                            <li><abbr title="Node Package Manager">NPM</abbr></li>
+                            <li>Composer</li>
+                            <li>Parcel.js</li>
+                            <li>Gulp</li>
+                            <li>Jekyll/Hugo</li>
+                            <li>Webflow</li>
+                        </ul>
+                        <h5>Payment Services:</h5>
+                        <ul>
+                            <li>Stripe</li>
+                            <li>PayPal/Braintree</li>
+                            <li>Sagepay</li>
+                            <li>Go Cardless</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mb-5" />
+        <div class="row">
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="software">Software & Efficiency</h4>
+                <p class="mt-2 small"></p>
+                <p>Tools of the trade</p>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item-list mb-4">
+                            <h5>Project Management:</h5>
+                            <ul>
+                                <li>Asana</li>
+                                <li>ClickUp</li>
+                                <li>Jira</li>
+                                <li>Harvest</li>
+                                <li>BaseCamp</li>
+                                <li>TeamWeek</li>
+                                <li>Trello</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Methodologies:</h5>
+                            <ul>
+                                <li>Kanban</li>
+                                <li>Leean</li>
+                                <li><abbr title="Minimum Viable Product">MVP</abbr></li>
+                                <li>Agile</li>
+                                <li>Continuous Integration</li>
+                                <li><abbr title="Atomicity, Consistency, Isolation, Durability">ACID</abbr></li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Business & Collaboration:</h5>
+                            <ul>
+                                <li>Google Apps</li> 
+                                <li>Xero</li>
+                                <li>Mirro</li>
+                                <li>Notion</li>
+                                <li>InVision</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Concepts & Paradigms:</h5>
+                            <ul>
+                                <li>Principal of Least Astonishment</li>
+                                <li>Grand Unified Theory of Software Developemnt</li>
+                                <li>Functional Programming</li>
+                                <li>Test Driven Development</li>
+                                <li>No Free Lunch Theorem</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 item-list">
+                        <div class="item-list mb-4">
+                            <h5>Cotent Management:</h5>
+                            <ul> 
+                                <li>Wordpress</li>
+                                <li>Joomla</li>
+                                <li>Drupal</li>
+                                <li>Expression Engine</li>
+                                <li>Craft</li>
+                                <li>Perch</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5><abbr title="Business Intelligence">BI</abbr>/Analytics/<abbr title="Conversion Rate Otimisation">CRO</abbr>:</h5>
+                            <ul> 
+                                <li>Google Analytics</li>
+                                <li>Google Data Studio</li>
+                                <li>Tableau</li>
+                                <li>HotJar</li>
+                                <li>Google Optimize</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>E-commerce:</h5>
+                            <ul>
+                                <li>Shopify</li>
+                                <li>Stripe Checkout</li>
+                                <li>Woocommerce</li>
+                                <li>Magento</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5><abbr title="Integrated Development Environment">IDEs</abbr>:</h5>
+                            <ul>
+                                <li>VS Code</li>
+                                <li>Sublime</li>
+                                <li>Jupyter</li>
+                                <li>Spyder</li>
+                                <li>Google Colab</li>
+                            </ul>
+                            <h5><abbr title="Customer Relationship Managmement">CRMs</abbr>:</h5>
+                            <ul>
+                                <li>Hubspot</li>
+                                <li>Salesforce</li>
+                                <li>Insightly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h2>Education</h2>
+        <hr class="mb-5" />
+        <div class="row mb-5">
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="masters">Master of Research</h4>
+                <p class="mt-2 small">Bournemouth University 2018 - 2020</p>
+                <em>Interactive Data Forecasting for NHS Engliand's 'prevention at scale' initiative</em>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item-list mb-4">
+                            <h5>Research Project:</h5>
+                            <ul> 
+                                <li>Statistics/<abbr title="Machine Learning">ML</abbr> (Univariat & Causal Inference)</li>
+                                <li>Action Research</li>
+                                <li>Public Health</li>
+                                <li>Inter-professional Behavioural Change</li>
+                                <li>Epidemeology</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 item-list">
+                        <div class="item-list mb-4">
+                            <h5>Thesis:</h5>
+                            <p>"An exploratory case study analysis of the role evidence based communication plays in <abbr title="General Practioner">GP</abbr> referral rates"</p>
+                            <p><a href="#">Download</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="batchelors">Batchelor of Science (hons)</h4>
+                <p class="mt-2 small">Bournemouth University 2001 - 2005</p>
+                <em>Multimedia Communication Systems</em>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="item-list mb-4">
+                            <h5>Year 1:</h5>
+                            <ul> 
+                                <li>Software Development</li>
+                                <li>Database Systems</li>
+                                <li>Multimedia Developemnt</li>
+                                <li>Communicaiton Systems</li>
+                                <li>Multimedia Computer Architecture</li>
+                                <li>Business Enterprise & Developemnt</li>
+                            </ul>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Year 2:</h5>
+                            <ul> 
+                                <li>Client-Server System Developement </li>
+                                <li>Computer Networks</li>
+                                <li>Distributed Multimedia Systems</li>
+                                <li>Management of Multimedia Projects</li>
+                                <li>Human Computer Interfaces</li>
+                                <li>Creative Multimedia Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 item-list">
+                        <div class="item-list mb-4">
+                            <h5>Year 3:</h5>
+                            <p>One year industrial placement. I worked for Bournemouth & Poole college in their Information 
+                                Learning Technology department. The role used various techologiyes to buld online leanring materials for studdent use. </p>
+                            <p><a>Read more...</a><br><br><span class="hidden">During this year the colege was looking to rebuild their website, as a counter option to finding an 
+                                agency I produced a webiste protoype that brought the project in-house. I was asked to defer a year, whcih I declined, 
+                                and they went on to hire two permemnta staff to continue the project.</span></p>
+                        </div>
+                        <div class="item-list mb-4">
+                            <h5>Year 4:</h5>
+                            <ul> 
+                                <li>Advanced Networks</li>
+                                <li>Digital Communication Systems</li>
+                                <li>E-Business</li>
+                                <li>Individual Project</li>
+                                <li>Advanced Multimedia Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4 class="mb-0" id="alevel">A-level</h4>
+                <p class="mt-2 small">Exmouth Community College 1999 - 2001</p>
+                <p></p>
+            </div>
+            <div class="col-md-7 item-list">
+                <div class="item-list mb-4">
+                    <ul> 
+                        <li>Computer Science</li>
+                        <li>Physics</li>
+                        <li>Media Studies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <h3>Thanks for reading - Contact: <a href="mailto:andylwhite@gmail.com">andylwhite@gmail.com</a> - © 2020 Andy White</h3>
+    </div>
+</footer>
+</body>
 </html>
