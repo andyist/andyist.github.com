@@ -50,7 +50,7 @@ body {
 
 /* 2. Content elements */
 body {
-	background: #6b93d6;
+	background: #f2cc0f;
 	padding: 4vw 9vw;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 main {
-	font-family: "Montserrat", Helvetica, sans-serif;
+	font-family: Ubuntu, sans-serif;
 	font-size: 40px;
 	font-weight: 600;
 	color: #030004;
@@ -115,8 +115,9 @@ main {
 }
 
 a, .profile-info > span {
-	color: #ffffff;
+	color: #006979;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 a:hover, .profile-info > span:hover {
